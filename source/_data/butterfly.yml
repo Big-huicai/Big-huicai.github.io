@@ -39,18 +39,6 @@ social:
   fab fa-github: https://github.com/Big-huicai || Github
   # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
 
-
-# 友链
-# --------------------------------------
-Flink:
-  headline: 友情链接
-  info_headline: 我的Blog资料
-  name: Blog 名字： 
-  address: Blog 地址： https://www.antmoe.com/
-  avatar: Blog 头像： https://img.antmoe.com/avatar.jpg
-  info: Blog 简介： 一个收藏回忆与分享技术的地方！
-  comment: 如果需要交换友链,请留言  
-
 # search (搜索)
 # --------------------------------------
 
@@ -108,7 +96,7 @@ index_img:
 default_top_img: https://imgkr.cn-bj.ufileos.com/b369fcd7-84d7-4477-ae4f-7291c76d7404.jpg
 
 # the banner image of archive page
-archive_img:
+archive_img: https://imgkr2.cn-bj.ufileos.com/a1cf8871-b8d5-4534-996a-e04572eba5be.jpg?UCloudPublicKey=TOKEN_8d8b72be-579a-4e83-bfd0-5f6ce1546f13&Signature=%2BeaJlYnd3UzsROPJhziB%2BYSLf9c%3D&Expires=1596248945
 
 # the banner image of tag page
 # tag page, look like https://xxxxxxxxx.com/tags/butterfly
@@ -183,7 +171,7 @@ toc:
   auto_open: true # auto open the sidebar
 
 post_copyright:
-  enable: true
+  enable: false
   decode: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -589,7 +577,7 @@ aside:
     description:
   card_announcement:
     enable: true
-    content: 也没啥事
+    content: 平平常常，莫得啥事，同安
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -751,6 +739,7 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
   bottom:
     # - <script src="xxxx"></script>
+    # <script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@master/xkTool/v3.1.1/xkTool.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
