@@ -1,7 +1,7 @@
 ---
 title: '[Vue略懂系列]-组件通讯及插槽'
 date: 2020-07-30 14:25:19
-cover: https://imgkr.cn-bj.ufileos.com/39f2fc48-7426-43b4-9f18-fc027e4ba52f.jpg
+cover: /images/bg5.jpg
 tags:
   - 前端
   - vue
@@ -11,10 +11,7 @@ categories:
 
 # 组件通讯
 
-
 　　要用vue，就不得不提起它得组件化，万物皆组件，组件多了就不可避免的要串串门聊聊天啥的，这不串不要紧啊，这一串门，就出了大问题，到爷爷家该怎么打招呼呀，到兄弟家该怎么唠唠嗑，父子，兄弟，祖孙，曾曾祖孙，该守得规矩还得守，顿时是一个头变得两个大。
-
-![avatar](https://imgkr.cn-bj.ufileos.com/c56fb500-b587-480f-8c77-8ee775fe206d.jfif)
 
 　　但是，作为一个打小品(lan)学(de)兼(dong)优(nao)的三好学生,怎么会被这点困难所打到，来个12345，安排的明明白白:
 
@@ -105,3 +102,55 @@ provide() {
 // descendant
 inject: ['foo']
 ```
+
+# 插槽
+
+　　插槽语法是Vue 实现的内容分发 API，用于复合组件开发。该技术在通用组件库开发中有大量应用。
+
+### 匿名插槽
+```
+// comp1
+<div>  
+  <slot></slot>
+</div>
+
+// parent
+<comp>hello</comp>
+
+```
+### 具名插槽
+
+将内容分发到子组件指定位置
+```
+// comp2
+<div>  
+  <slot></slot>  
+  <slot name="content"></slot>
+</div>
+
+// parent
+<Comp2>
+  <!-- 默认插槽用default做参数 -->
+  <template v-slot:default>具名插槽</template>
+  <!-- 具名插槽用插槽名做参数 -->
+  <template v-slot:content>内容...</template>
+</Comp2>
+```
+
+### 作用域插槽
+
+分发内容要用到子组件中的数据
+```
+// comp3
+<div>  
+  <slot :foo="foo"></slot>
+</div>
+// parent
+<Comp3>
+  <!-- 把v-slot的值指定为作用域上下文对象 -->
+  <template v-slot:default="slotProps">来自子组件数据：{{slotProps.foo}}</template>
+</Comp3>
+
+```
+
+　　组件通讯方式及插槽的一些简单介绍就到此结束,方便自己之后的复盘与学习查看, skr~
